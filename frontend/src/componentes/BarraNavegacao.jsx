@@ -1,24 +1,64 @@
-function BarraNavegacao() {
+import { useState } from 'react';
+
+function BarraNavegacao({ onNavigate }) {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  function navegarPara(evento, caminho) {
+    evento.preventDefault();
+    onNavigate(caminho);
+    setMenuAberto(false);
+  }
+
+  const links = [
+    { nome: 'Início', caminho: '/' },
+    { nome: 'Soluções', caminho: '/solucoes' },
+    { nome: 'Nosso projeto', caminho: '/projetos' },
+    { nome: 'Impacto', caminho: '/impacto' },
+  ];
+
   return (
     <header className="barra-navegacao">
-      <div className="logo">
-        <div className="logo-icone">♧</div>
-        <span>Raiz</span>
-      </div>
+      <a
+        href="/"
+        className="logo"
+        onClick={(e) => navegarPara(e, '/')}
+      >
+        <div className="logo-icone">✳</div>
+        <span>raiz<span className="logo-ponto">.</span></span>
+      </a>
 
-      <nav>
-        <a href="/">Início</a>
-        <a href="/solucoes">Soluções</a>
-        <a href="/projetos">Projetos</a>
-        <a href="/impacto">Impacto</a>
+      <nav className={menuAberto ? 'nav-links ativo' : 'nav-links'}>
+        {links.map((link) => (
+          <a
+            key={link.caminho}
+            href={link.caminho}
+            onClick={(e) => navegarPara(e, link.caminho)}
+          >
+            {link.nome}
+          </a>
+        ))}
       </nav>
 
-      <button className="botao-navegacao">
-        Encontrar solução
+      <button
+        type="button"
+        className="botao-navegacao"
+        onClick={() => {
+          onNavigate('/chatbot');
+          setMenuAberto(false);
+        }}
+      >
+        <span>✧</span> Encontrar solução
+        <span className="seta-botao">↗</span>
       </button>
 
-      <button className="menu">
-        ☰
+      <button
+        type="button"
+        className="menu"
+        aria-label={menuAberto ? 'Fechar menu' : 'Abrir menu'}
+        aria-expanded={menuAberto}
+        onClick={() => setMenuAberto(!menuAberto)}
+      >
+        {menuAberto ? '✕' : '☰'}
       </button>
     </header>
   );
