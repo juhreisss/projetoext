@@ -35,7 +35,7 @@ function Chatbot() {
 
     try {
       const resposta = await fetch(
-        'http://127.0.0.1:8000/api/solucoes/chatbot/',
+        `${import.meta.env.VITE_API_URL}/api/solucoes/chatbot/`,
         {
           method: 'POST',
           headers: {

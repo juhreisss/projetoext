@@ -9,7 +9,7 @@ function Solucoes() {
   const [erro, setErro] = useState('');
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/solucoes/')
+    fetch(`${import.meta.env.VITE_API_URL}/api/solucoes/`)
       .then((resposta) => {
         if (!resposta.ok) {
           throw new Error('Não foi possível carregar as soluções.');
