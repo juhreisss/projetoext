@@ -1,0 +1,214 @@
+[
+{
+  "model": "projetos.projeto",
+  "pk": 1,
+  "fields": {
+    "nome": "Cultivando Futuro",
+    "descricao": "Implantação de uma horta comunitária e educativa com sistema de irrigação automatizado.",
+    "problema": "Aproveitamento limitado do espaço disponível e dificuldades relacionadas à manutenção de iniciativas semelhantes.",
+    "solucao": "Implantação de uma horta de temperos e plantas de pequeno porte com um sistema de irrigação automatizado para otimizar o uso da água e facilitar a manutenção.",
+    "local": "Sociedade Pró-Menor",
+    "status": "Em andamento"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 1,
+  "fields": {
+    "nome": "Irrigação inteligente",
+    "categoria": "Água",
+    "descricao": "Sistema automatizado para controlar a irrigação de acordo com a umidade do solo.",
+    "problema_resolvido": "Desperdício de água e necessidade de irrigação manual frequente.",
+    "custo": "Baixo",
+    "dificuldade": "Média",
+    "impacto": "Alto"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 2,
+  "fields": {
+    "nome": "Captação de água da chuva",
+    "categoria": "Água",
+    "descricao": "Sistema para coletar e armazenar água da chuva para utilizar na limpeza, jardinagem e outras atividades não potáveis.",
+    "problema_resolvido": "Consumo excessivo de água potável em atividades que podem utilizar água da chuva, além do desperdício da água que escorre pelos telhados.",
+    "custo": "Médio",
+    "dificuldade": "Média",
+    "impacto": "Alto"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 5,
+  "fields": {
+    "nome": "Energia solar",
+    "categoria": "Energia",
+    "descricao": "Utilização de painéis solares para transformar a luz do sol em energia elétrica.",
+    "problema_resolvido": "Dependência de energia elétrica convencional e custos elevados com consumo de eletricidade.",
+    "custo": "Alto",
+    "dificuldade": "Alta",
+    "impacto": "Alto"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 6,
+  "fields": {
+    "nome": "Iluminação LED",
+    "categoria": "Energia",
+    "descricao": "Substituição de lâmpadas convencionais por lâmpadas LED, que consomem menos energia..",
+    "problema_resolvido": "Alto consumo de energia elétrica causado pelo uso de lâmpadas menos eficientes e necessidade frequente de substituição.",
+    "custo": "Baixo",
+    "dificuldade": "Baixa",
+    "impacto": "Médio"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 7,
+  "fields": {
+    "nome": "Compostagem doméstica",
+    "categoria": "Resíduos",
+    "descricao": "Transformação de restos de alimentos e resíduos orgânicos em adubo natural por meio da compostagem.",
+    "problema_resolvido": "Descarte inadequado de resíduos orgânicos no lixo comum, aumentando o volume de lixo enviado aos aterros e desperdiçando materiais que poderiam ser reaproveitados.",
+    "custo": "Baixo",
+    "dificuldade": "Baixa",
+    "impacto": "Alto"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 8,
+  "fields": {
+    "nome": "Coleta seletiva",
+    "categoria": "Resíduos",
+    "descricao": "Separação de materiais recicláveis, como papel, plástico, vidro e metal, para facilitar o encaminhamento à reciclagem.",
+    "problema_resolvido": "Mistura de materiais recicláveis com resíduos orgânicos e rejeitos, dificultando a reciclagem e aumentando o descarte inadequado.",
+    "custo": "Baixo",
+    "dificuldade": "Baixa",
+    "impacto": "Alto"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 9,
+  "fields": {
+    "nome": "Horta vertical",
+    "categoria": "Alimentação",
+    "descricao": "Cultivo de verduras, legumes e temperos em estruturas verticais que aproveitam espaços pequenos.",
+    "problema_resolvido": "Falta de espaço para cultivo de alimentos em casas e apartamentos, além da dificuldade de produzir alimentos frescos em ambientes urbanos.",
+    "custo": "Baixo",
+    "dificuldade": "Média",
+    "impacto": "Alto"
+  }
+},
+{
+  "model": "solucoes.solucao",
+  "pk": 10,
+  "fields": {
+    "nome": "Aproveitamento integral dos alimentos",
+    "categoria": "Alimentação",
+    "descricao": "Utilização de partes dos alimentos que normalmente seriam descartadas, como cascas, talos e folhas, em preparações culinárias adequadas.",
+    "problema_resolvido": "Desperdício de alimentos causado pelo descarte de partes com potencial de consumo e aproveitamento.",
+    "custo": "Baixo",
+    "dificuldade": "Baixa",
+    "impacto": "Médio"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 1,
+  "fields": {
+    "nome": "Economia de água",
+    "descricao": "Redução do consumo de água por meio de práticas sustentáveis e uso eficiente dos recursos hídricos.",
+    "valor": "30.00",
+    "unidade": "%",
+    "categoria": "Água",
+    "atualizado_em": "2026-10-23T18:24:11.190Z"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 2,
+  "fields": {
+    "nome": "Economia de energia",
+    "descricao": "Redução do consumo de energia elétrica com tecnologias eficientes e hábitos conscientes.",
+    "valor": "20.00",
+    "unidade": "%",
+    "categoria": "Energia",
+    "atualizado_em": "2026-10-23T18:24:38.731Z"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 3,
+  "fields": {
+    "nome": "Redução de resíduos",
+    "descricao": "Diminuição da quantidade de resíduos descartados por meio da reciclagem e reutilização.",
+    "valor": "25.00",
+    "unidade": "%",
+    "categoria": "Resíduos",
+    "atualizado_em": "2026-10-23T18:25:08.271Z"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 4,
+  "fields": {
+    "nome": "Plantio de árvores",
+    "descricao": "Contribuição para o aumento da vegetação e preservação da biodiversidade.",
+    "valor": "100.00",
+    "unidade": "árvores",
+    "categoria": "Natureza",
+    "atualizado_em": "2026-10-23T18:25:49.691Z"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 5,
+  "fields": {
+    "nome": "Compostagem",
+    "descricao": "Transformação de resíduos orgânicos em adubo, reduzindo o descarte de lixo.",
+    "valor": "50.00",
+    "unidade": "kg",
+    "categoria": "Resíduos",
+    "atualizado_em": "2026-10-23T18:26:25.677Z"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 6,
+  "fields": {
+    "nome": "Produção de alimentos",
+    "descricao": "Incentivo ao cultivo de alimentos frescos em hortas sustentáveis.",
+    "valor": "20.00",
+    "unidade": "kg",
+    "categoria": "Alimentação",
+    "atualizado_em": "2026-10-23T18:26:51.992Z"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 7,
+  "fields": {
+    "nome": "Redução de CO₂",
+    "descricao": "Contribuição para a diminuição das emissões de gases de efeito estufa.",
+    "valor": "15.00",
+    "unidade": "kg",
+    "categoria": "Meio ambiente",
+    "atualizado_em": "2026-10-23T18:27:35.023Z"
+  }
+},
+{
+  "model": "impacto.indicadorimpacto",
+  "pk": 8,
+  "fields": {
+    "nome": "Preservação do solo",
+    "descricao": "Melhoria das condições do solo por meio de práticas sustentáveis.",
+    "valor": "10.00",
+    "unidade": "m²",
+    "categoria": "Solo",
+    "atualizado_em": "2026-10-23T18:28:16.357Z"
+  }
+}
+]
